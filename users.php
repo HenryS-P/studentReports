@@ -6,6 +6,8 @@
     
 </head>
 <body>
+
+
 <form action="addusers.php" method = "POST">
   First name:<input type="text" name="forename"><br>
   Last name:<input type="text" name="surname"><br>
