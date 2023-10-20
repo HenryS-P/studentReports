@@ -9,7 +9,8 @@ Forename VARCHAR(20) NOT NULL,
 Password VARCHAR(20) NOT NULL,
 House VARCHAR(20) NOT NULL,
 Year INT(2) NOT NULL,
-Role TINYINT(1))");
+Role TINYINT(1),
+Subject VARCHAR(35))");
 $stmt->execute();
 $stmt->closeCursor();
 ?>
