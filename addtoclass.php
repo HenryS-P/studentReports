@@ -1,9 +1,10 @@
 <?php
 include_once("connection.php");
 header('Location: pupildoessubject.php');
-$stmt = $conn->prepare("INSERT INTO tblpupilstudies (SubjectID,Userid,Classposition,Classgrade,Exammark,Comment)VALUES (:subjectname,:teachername,null,null,null,null)");
-    $stmt->bindParam(':SubjectID', $_POST["subjectname"]);
-    $stmt->bindParam(':UserID', $_POST["teachername"]);
+//print_r($_POST);
+$stmt = $conn->prepare("INSERT INTO tblpupilstudies (SubjectID,Userid,Classposition,Classgrade,Exammark,Comment)VALUES (:SubjectID,:UserID,null,null,null,null)");
+    $stmt->bindParam(':SubjectID', $_POST["subject"]);
+    $stmt->bindParam(':UserID', $_POST["student"]);
     $stmt->execute();
     $conn=null;
 
