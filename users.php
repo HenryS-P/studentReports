@@ -7,7 +7,13 @@
 </head>
 <body>
 
-
+<?php
+session_start(); 
+if (!isset($_SESSION['name']))
+{   
+    header("Location:login.php");
+}
+?>
 <form action="addusers.php" method = "POST">
   First name:<input type="text" name="forename"><br>
   Last name:<input type="text" name="surname"><br>

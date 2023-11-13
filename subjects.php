@@ -6,7 +6,13 @@
     
 </head>
 <body>
-
+<?php
+session_start(); 
+if (!isset($_SESSION['name']))
+{   
+    header("Location:login.php");
+}
+?>
 
 <form action="addsubjects.php" method = "POST">
   Subject name:<input type="text" name="subjectname"><br>
